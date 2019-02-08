@@ -2,6 +2,9 @@
 
 Export ethtool metrics to prometheus compatible format
 
+
+Build status: ![master](https://travis-ci.org/jbfavre/ethtool-exporter.svg?branch=master)
+
 ## Usage
 
 ```./ethtool-exporter --help
