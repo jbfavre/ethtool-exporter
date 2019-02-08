@@ -1,4 +1,4 @@
-# ethtool-exporter
+# ethtool-exporter ![master](https://travis-ci.org/jbfavre/ethtool-exporter.svg?branch=master)
 
 Export ethtool metrics to prometheus compatible format
 
