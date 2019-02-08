@@ -27,3 +27,7 @@ using `-output` option. Please note that any directory iin the path **must** exi
 `ethtool-exporter` won't try to create them.
 
 This file can be polled by an existing prometheus-exported which has access to the directory.
+
+## Contributing
+
+Fork this repo, work, open a pull request, wait for TRavis CI result
