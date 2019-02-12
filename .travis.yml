@@ -1,13 +1,19 @@
 language: go
 
-go:
-- 1.10.x
-- 1.11.x
-- master
+matrix:
+  fast_finish: true
+  include:
+    - go: 1.10.x
+    - go: 1.11.x
+      env: GO111MODULE=on
+    - go: master
+      env: GO111MODULE=on
+  allow_failures:
+    - go: master
 
-env:
-  - GO111MODULE=on
-
-script:
-  - go test
-  - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ethtool-exporter .
+jobs:
+  include:
+    - stage: test
+      script: go test
+    - stage: build
+      script: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ethtool-exporter .
